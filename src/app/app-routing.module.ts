@@ -8,9 +8,9 @@ import { SecondGuard } from './guards/second.guard';
 const guards = [SecondGuard];
 
 const routes: Routes = [{
-  path: 'one', component: OneComponent, canActivate: [FirstGuard]
+  path: 'one', component: OneComponent, canActivate: [FirstGuard].concat(SecondGuard)
 }, {
-  path: 'two', component: TwoComponent, canActivate: guards.concat(FirstGuard)
+  path: 'two', component: TwoComponent, canActivate: [...guards, FirstGuard]
 }
 ];
 
