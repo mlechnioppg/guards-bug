@@ -9,16 +9,7 @@ export class SecondGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    console.log('SecondGuard')
-    return new Observable((observer: Observer<boolean>) => {
-      const handler = setTimeout(() => {
-        console.log('setTimeout')
-        observer.next(true);
-      }, 1000);
-
-      return () => {
-        clearTimeout(handler);
-      }
-    });
+    console.log('SecondGuard');
+    return true;
   }
 }

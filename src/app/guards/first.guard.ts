@@ -9,7 +9,7 @@ export class FirstGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    console.log('FirstGuard')
+    console.log('FirstGuard');
     return true;
   }
 }
